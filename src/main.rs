@@ -4,7 +4,7 @@ use std::env;
 
 fn simplify_string(pwd: String, home: String) -> String {
     let prettyhome = pwd.replacen(home.as_str(), "/~", 1);
-    let dirs: Vec<&str> = prettyhome.split("/").collect();
+    let dirs: Vec<&str> = prettyhome.split('/').collect();
     let mut print_dirs: Vec<&str> = Vec::new();
     if dirs.len() > 4 {
         if dirs[1] != "~" {
@@ -17,7 +17,7 @@ fn simplify_string(pwd: String, home: String) -> String {
         print_dirs = dirs
     }
     // println!("{:#?}", print_dirs);
-    return print_dirs.join("/").replacen("/~", "~", 1);
+    print_dirs.join("/").replacen("/~", "~", 1)
 }
 
 fn main() {
