@@ -7,4 +7,4 @@ edition = "2021"
 
 [profile.release]
 lto = true
-# strip = "symbols"
+strip = "symbols"
